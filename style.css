@@ -1,0 +1,329 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/* top-bar section start here */
+.top-bar-section{
+    background-color: #104a64;
+    padding: 15px 10px;
+}
+.container{
+    max-width:97%;
+    margin:0 auto;
+}
+.top-bar-parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.topbar-contact-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.topbar-contact-info > span{
+    font-size:18px;
+}
+.topbar-contact-info >span > i{
+    font-size: 16px;
+    margin-right: 10px;
+}
+.topbar-button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.topbar-button >a{
+    text-decoration: none;
+    background-color: #15d2fc;
+    font-size:18px;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.topbar-button >a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+/* navigation center start here */
+.navigation-section{
+    padding: 15px 10px;
+    background-color:white;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width:330px;
+}
+.logo > img{
+    max-width: 100%;
+    cursor: pointer;
+}
+.navigation > ul{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap:40px;
+}
+.navigation > ul > li{
+    list-style: none;
+}
+.navigation > ul > li > a{
+    font-size:18px;
+    color: black;
+    text-decoration: none;
+}
+.navigation >ul > li >a:hover{
+    color: #15d2fc;
+}
+.dropDown-menu{   
+    opacity: 0;
+    visibility: hidden; 
+    background-color: #15d2fc;
+    position: absolute;
+    max-width: 100%;
+    margin-top: 10px;
+    transition: 0.5s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.dropDown-menu > li{
+    list-style: none;
+    padding: 15px; 
+}
+.dropDown-menu > li:first-child{
+    border-bottom: 1px solid black;
+}
+.dropDown-menu > li >a{
+   text-decoration: none; 
+   color: white;
+   font-size: 18px;
+}
+.dropDown-menu > li:hover{
+    background-color: black;
+}
+.navigation > ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+.navigation > ul > li > a > .right-carret > i{
+    margin-left:10px;
+}
+.dropDown-menu2{   
+    opacity: 0;
+    visibility: hidden; 
+    background-color: #15d2fc;
+    position: absolute;
+    max-width: 100%;
+    margin-top: 10px;
+    transition: 0.5s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.dropDown-menu2 > li{
+    list-style: none;
+    padding: 15px;
+    border-bottom: 1px solid black; 
+}
+.dropDown-menu2 > li:last-child{
+   border: none;
+}
+.dropDown-menu2 > li >a{
+   text-decoration: none; 
+   color: white;
+   font-size: 18px;
+}
+.dropDown-menu2 > li:hover{
+    background-color: black;
+}
+.navigation > ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);   
+}
+/* hero section code start here */
+.hero-section{
+    display: flex;
+    justify-content:center;
+    align-items:flex-end;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.023), rgba(0, 0, 0, 0.877)),url('Image/Transforming-Lives-Through-banner-a.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 40px 70px;
+}
+.hero-container{
+    width:744px;
+    margin:0 auto;
+    text-align: center;
+    color: white;
+    
+}
+.hero-contain > h1{
+    font-size:45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-contain p{
+    font-size: 25px;
+    line-height:1.5em;
+    margin-bottom: 20px;
+}
+.hero-button{ 
+    background-color: #15d2fc;
+    font-size:18px;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    border: none;
+}
+.hero-button:hover{
+    background-color:#035264;
+}
+/* first section code start here */
+.core-section{
+    background-color: rgb(254, 254, 254);
+    padding: 60px 10px;
+}
+.core-container-parent{
+    display: flex;
+    justify-content: space-between; 
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;  
+}
+.core-container-parent > *{
+    flex-basis: 100%;
+}
+.core-tittle h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.core-content-parent{
+    display: flex;
+    flex-direction: column;
+    gap:50px; 
+    align-items: center;
+    justify-content: center;
+    margin-right:20px;  
+}
+.core-content-single{
+    display: flex;
+    gap: 20px;
+}
+.core-content-single2{
+    display: flex;
+    gap: 20px;
+    background-color:#f0f4f5;
+    padding: 20px 30px;
+    margin: 0px 0px 0px -30px;
+    border-radius: 20px 0px 0px 20px;
+}
+.core-image-div{
+   position: relative;
+}
+.core-image{
+    max-width: 80%;
+    border-radius:100px 20px 0px 10px;
+}
+.core-icon-div{
+    position: relative;
+}
+.core-icon-div i{
+    background-color: #035264;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 100px 0px 100px 100px;
+    color: white;
+}
+.core-text{
+   
+}
+.core-text h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.core-text p{
+    line-height: 25px;
+}
+.core-image-two{
+    width: 500px;
+    margin-top: -100px;
+    margin-left:80px;   
+}
+.core-image-two img{
+    border-radius: 10px 0px 100px 10px;
+    max-width: 100%;
+    border: 10px solid white;
+}
+.core-image-div::before{
+    content: "";
+    top: 35px;
+    right: 0;
+    position: absolute;
+    width:70px;
+    height:70px;
+    border-radius: 500px 500px 0px 0px;
+    background-color: #15d2fc;
+    clip-path:polygon(50% 0%, 0% 100%, 100% 100%);
+    animation-name:topbounce;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.happy-customers-parent{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: #15d2fc;
+    gap:20px;
+    width: 250px;
+    height:50px;
+    padding: 20px;
+    border-radius:35px;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    animation-name:topbounce;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+.Customers-icon{
+    background-color: white;
+    padding:15px;
+    border-radius: 50%;
+}
+.Customers-icon i{
+    font-size:30px;
+}
+.Customers-text h4{
+    font-size: 25px;
+    color: white;
+    margin-bottom:5px;
+}
+.Customers-text p{
+    font-size:18px;
+    color: white;
+}
+@keyframes topbounce{
+ 0%{
+    transform: translateY(0px);
+ }
+ 50%{
+    transform: translateY(20px);
+ }
+ 100%{
+    transform: translateY(0px);
+ }
+}
