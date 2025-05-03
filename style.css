@@ -316,6 +316,59 @@
     font-size:18px;
     color: white;
 }
+/* second section code start here */
+.about-section{
+    background-image: url('Image/onlien-academy-hero-background.png');
+    padding: 60px 0;
+    margin-bottom: 100px;
+}
+.about-wrapper{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.about-wrapper > *{
+    flex-basis: 100%;
+}
+.about-image img{
+    max-width:80%;
+    border-radius: 100%;
+}
+.about-image-two{
+    width: 300px;
+}
+.about-image-two img{
+    max-width:100%;
+    margin-top:-250px;
+    margin-left:270px;
+    border:10px solid white;
+}
+.content-text{
+    margin-left:40px;
+}
+.content-text h2{
+    font-size:45px;
+    color: #035264;
+    margin-bottom: 20px;
+}
+.content-text p{
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom:25px;
+}
+.content-text a{
+    background-color: #15d2fc;
+    padding: 15px 38px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size:18px;
+}
+.content-text a:hover{
+    background-color: #104a64;
+}
 @keyframes topbounce{
  0%{
     transform: translateY(0px);
