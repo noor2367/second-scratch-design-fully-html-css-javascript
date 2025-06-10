@@ -1,24 +1,60 @@
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const testimonials = document.querySelectorAll('.single-testmonial');
-    const visibleCount = 3;
-    let startIndex = 0;
+const testSlides = document.querySelectorAll('.single-testmonial');
+const dots = document.querySelectorAll('.dot');
+const groupSize = 3;
+let currentGroup = 0;
+const totalGroups = 5; // since you want 5 indicators
+let autoInterval;
 
-    function showTestimonials() {
-        testimonials.forEach((t, index) => {
-            t.style.display = "none";
-        });
+// Hide all slides
+function hideAll() {
+    testSlides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+}
 
-        for (let i = 0; i < visibleCount; i++) {
-            const current = (startIndex + i) % testimonials.length;
-            testimonials[current].style.display = "block";
+// Show current group of 3 slides
+function showGroup(index) {
+    hideAll();
+    for (let i = 0; i < groupSize; i++) {
+        let slideIndex = index * groupSize + i;
+        if (slideIndex < testSlides.length) {
+            testSlides[slideIndex].style.display = 'block';
+            testSlides[slideIndex].style.animation = 'next2 0.5s ease-in forwards';
         }
-
-        startIndex = (startIndex + 1) % testimonials.length;
     }
+    updateDots(index);
+}
 
-    showTestimonials(); // Show initial set
+// Update dots active state
+function updateDots(index) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[index]) dots[index].classList.add('active');
+}
 
-    setInterval(showTestimonials, 3000); // Change every 3 seconds
+// Auto-slide function
+function slideNext() {
+    currentGroup = (currentGroup + 1) % totalGroups;
+    showGroup(currentGroup);
+}
+
+// Handle dot click
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        currentGroup = parseInt(dot.getAttribute('data-index'));
+        showGroup(currentGroup);
+    });
 });
-</script>
+
+// Start auto sliding
+function autoSliding() {
+    autoInterval = setInterval(slideNext, 4000);
+}
+
+// Pause on hover
+const indicatorContainer = document.querySelector('.indicators');
+indicatorContainer.addEventListener('mouseover', () => clearInterval(autoInterval));
+indicatorContainer.addEventListener('mouseout', autoSliding);
+
+// Init
+showGroup(currentGroup);
+autoSliding();
